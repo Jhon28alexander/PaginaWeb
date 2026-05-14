@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festividades de Brasil</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <img src="images/icono2.jpg" alt="Icono representativo de Brasil - bandera de brasil">
+    <div class="header-content">
+      <h1>Festividades de Brasil</h1>
+      <p>Descubre las festividades más vibrantes y coloridas de Brasil</p>
+    </div>
+  </header>
+
+  <nav aria-label="Navegación principal">
+    <ul>
+      <li><a href="#inicio"       onclick="showSection('inicio', event)">Inicio</a></li>
+      <li><a href="#festividades" onclick="showSection('festividades', event)">Festividades</a></li>
+      <li><a href="#cultura"      onclick="showSection('cultura', event)">Cultura</a></li>
+      <li><a href="#guia"         onclick="showSection('guia', event)">Guía de viaje</a></li>
+      <li><a href="#galeria"      onclick="showSection('galeria', event)">Galería</a></li>
+      <li>
+        <select id="language-switch" onchange="changeLanguage(this.value)" aria-label="Cambiar idioma">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+        </select>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- seccion inicio  -->
+    <section id="inicio" class="active">
+      <div class="hero">
+        <div class="hero-content">
+          <h1>Bienvenido a Brasil</h1>
+          <p>Descubre las celebraciones, cultura y tradiciones</p>
+          <button onclick="showSection('festividades', event)" class="btn-explorar">
+            Explorar Festividades
+          </button>
+        </div>
+      </div>
+
+      <!-- El slider de imágenes se inyecta aquí desde interactivity.js -->
+      <!-- El banner de mensaje dinámico se inyecta aquí desde interactivity.js -->
+
+      <div class="inicio-texto">
+        <h2>Bienvenido</h2>
+        <p>Explora las celebraciones más importantes de Brasil y conoce su riqueza cultural, Brasil es un país reconocido mundialmente por su diversidad cultural y sus festividades llenas de color, música y tradición.</p>
+        <p>Cada celebración refleja la alegría de su gente y la riqueza de sus raíces.</p>
+
+        <h3>Cultura y Tradición</h3>
+        <p>Las festividades brasileñas combinan influencias indígenas, africanas y europeas, creando experiencias únicas que atraen a millones de visitantes cada año.</p>
+
+        <h3>Principales Festividades</h3>
+        <p>Descúbrelas en la sección de <strong>Festividades</strong>.</p>
+
+        <button onclick="showSection('festividades', event)" class="btn-secundario">
+          🌟 Explorar Festividades
+        </button>
+      </div>
+    </section>
+
+    <!-- Seccion Festividades -->
+    <section id="festividades">
+      <h2>🎉 Festividades de Brasil</h2>
+
+      <div class="tabs" role="tablist">
+        <button role="tab" id="tab-carnaval"  aria-selected="true"  onclick="showFestividad('carnaval', this)">Carnaval</button>
+        <button role="tab" id="tab-parintins" aria-selected="false" onclick="showFestividad('parintins', this)">Festival de Parintins</button>
+        <button role="tab" id="tab-juninas"   aria-selected="false" onclick="showFestividad('juninas', this)">Festas Juninas</button>
+        <button role="tab" id="tab-cirio"     aria-selected="false" onclick="showFestividad('cirio', this)">Círio de Nazaré</button>
+        <button role="tab" id="tab-navidad"   aria-selected="false" onclick="showFestividad('navidad', this)">Navidad y Año Nuevo</button>
+      </div>
+
+      <div class="tab-content">
+
+        <article id="carnaval" class="active" role="tabpanel" aria-labelledby="tab-carnaval">
+          <h2>Carnaval</h2>
+          <img src="images/image_carnaval.jpg" alt="Persona disfrazada con un traje rojo y una máscara de demonio, representando la tradición del Carnaval">
+          <p>La fiesta más grande de Brasil, con desfiles espectaculares, samba, disfraces coloridos y celebraciones en las calles de Río de Janeiro, Salvador y otras ciudades.</p>
+
+          <h3>📍 Ubicación</h3>
+          <p>Río de Janeiro, Salvador, São Paulo y otras ciudades principales.</p>
+
+          <h3>👥 Asistencia</h3>
+          <p>Millones de personas en todo el país.</p>
+
+          <h3>🎭 Tradiciones y Actividades</h3>
+          <ul>
+            <li>Desfiles de escolas de samba con carros alegóricos espectaculares.</li>
+            <li>Blocos de rua (grupos callejeros) que recorren las ciudades.</li>
+            <li>Concursos de disfraces y fantasías elaboradas.</li>
+            <li>Bailes de máscaras en clubes y hoteles.</li>
+            <li>Sambódromo: estadio especial para los desfiles principales.</li>
+          </ul>
+
+          <h3>🍴 Comida Típica</h3>
+          <p>Feijoada, Caipirinha, Acarajé, Pastel, Churrasco, Brigadeiro.</p>
+
+          <h3>🎶 Música y Danza</h3>
+          <p>Samba, Samba-enredo, Marchinha, Axé, Frevo, Maracatu.</p>
+        </article>
+
+        <article id="parintins" role="tabpanel" aria-labelledby="tab-parintins">
+          <h2>Festival de Parintins</h2>
+          <img src="images/image_festivaldeparintins.jpg" alt="Espectáculo folclórico del Festival de Parintins: bailarina con vestido negro elaborado y bailarín con traje festivo en tonos amarillos y naranjas">
+          <p>Competencia folclórica entre los grupos Boi Garantido y Boi Caprichoso con espectáculos de música, danza y mitología amazónica.</p>
+
+          <h3>📍 Ubicación</h3>
+          <p>Parintins, Amazonas.</p>
+
+          <h3>👥 Asistencia</h3>
+          <p>Más de 100.000 personas.</p>
+
+          <h3>🎭 Tradiciones y Actividades</h3>
+          <ul>
+            <li>Competencia entre Boi Garantido (rojo) y Boi Caprichoso (azul).</li>
+            <li>Espectáculos con mitología amazónica.</li>
+            <li>Danzas folclóricas.</li>
+            <li>Carrozas gigantes y alegorías.</li>
+          </ul>
+
+          <h3>🍴 Comida Típica</h3>
+          <ul>
+            <li>Tacacá.</li>
+            <li>Pato no tucupi.</li>
+            <li>Maniçoba.</li>
+          </ul>
+
+          <h3>🎶 Música y Danza</h3>
+          <ul>
+            <li>Toadas.</li>
+            <li>Ritmos amazónicos.</li>
+          </ul>
+        </article>
+
+        <article id="juninas" role="tabpanel" aria-labelledby="tab-juninas">
+          <h2>Festas Juninas</h2>
+          <img src="images/image_festasjuninas.jpg" alt="Celebración tradicional de las Festas Juninas: al centro alguien viste un atuendo de rayas doradas y moradas con sombrero llamativo, al fondo más personajes con disfraces de fantasía">
+          <p>Fiestas populares en junio que celebran a San Antonio, San Juan y San Pedro, con bailes, comidas típicas y ambiente rural.</p>
+
+          <h3>📍 Ubicación</h3>
+          <p>Todo Brasil, especialmente en el nordeste.</p>
+
+          <h3>👥 Asistencia</h3>
+          <p>Millones de personas en comunidades rurales y urbanas.</p>
+
+          <h3>🎭 Tradiciones y Actividades</h3>
+          <ul>
+            <li>Bailes de quadrilha.</li>
+            <li>Fogatas.</li>
+            <li>Concursos de disfraces campesinos.</li>
+            <li>Juegos típicos.</li>
+          </ul>
+
+          <h3>🍴 Comida Típica</h3>
+          <ul>
+            <li>Pamonha.</li>
+            <li>Canjica.</li>
+            <li>Maíz asado.</li>
+            <li>Bolo de fubá.</li>
+          </ul>
+
+          <h3>🎶 Música y Danza</h3>
+          <ul>
+            <li>Forró.</li>
+            <li>Baión.</li>
+            <li>Xote.</li>
+          </ul>
+        </article>
+
+        <article id="cirio" role="tabpanel" aria-labelledby="tab-cirio">
+          <h2>Círio de Nazaré</h2>
+          <img src="images/image_ciriodenazare.jpg" alt="Vela encendida que representa la devoción religiosa del Círio de Nazaré">
+          <p>Una de las mayores manifestaciones religiosas del mundo, celebrada en Belém en honor a la Virgen de Nazaré.</p>
+
+          <h3>📍 Ubicación</h3>
+          <p>Belém, Pará.</p>
+
+          <h3>👥 Asistencia</h3>
+          <p>Más de 2 millones de personas.</p>
+
+          <h3>🎭 Tradiciones y Actividades</h3>
+          <ul>
+            <li>Procesión con la imagen de la Virgen de Nazaré.</li>
+            <li>Misas y novenas.</li>
+            <li>Eventos culturales y religiosos.</li>
+          </ul>
+
+          <h3>🍴 Comida Típica</h3>
+          <ul>
+            <li>Maniçoba.</li>
+            <li>Pato no tucupi.</li>
+          </ul>
+
+          <h3>🎶 Música y Danza</h3>
+          <ul>
+            <li>Cantos religiosos.</li>
+            <li>Música sacra.</li>
+          </ul>
+        </article>
+
+        <article id="navidad" role="tabpanel" aria-labelledby="tab-navidad">
+          <h2>Navidad y Año Nuevo</h2>
+          <img src="images/image_navidadyañonuevo.jpg" alt="Árboles de navidad decorados con esferas rojas y otros adornos">
+          <p>La Navidad se celebra con cenas familiares y decoraciones luminosas, mientras que el Año Nuevo se vive en las playas con millones de personas vestidas de blanco.</p>
+
+          <h3>📍 Ubicación</h3>
+          <p>Todo Brasil, especialmente Río de Janeiro.</p>
+
+          <h3>👥 Asistencia</h3>
+          <p>Millones de personas en las playas.</p>
+
+          <h3>🎭 Tradiciones y Actividades</h3>
+          <ul>
+            <li>Cenas familiares en Navidad.</li>
+            <li>Decoraciones luminosas.</li>
+            <li>Celebración de Año Nuevo en Copacabana.</li>
+            <li>Ofrendas a Yemanjá.</li>
+            <li>Fuegos artificiales sobre el mar.</li>
+          </ul>
+
+          <h3>🍴 Comida Típica</h3>
+          <ul>
+            <li>Panettone.</li>
+            <li>Peru asado.</li>
+            <li>Rabanada.</li>
+          </ul>
+
+          <h3>🎶 Música y Danza</h3>
+          <ul>
+            <li>Villancicos.</li>
+            <li>Samba.</li>
+            <li>Axé.</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Seccion Cultura -->
+    <section id="cultura">
+      <h2>🌎 Cultura Brasileña</h2>
+      <img src="images/culturadebrasil.jpg" alt="Desfile de carnaval: varias bailarinas con trajes coloridos bailando en medio de la calle bajo el sol">
+      <p>La cultura de Brasil es una mezcla vibrante de influencias indígenas, africanas y europeas, que se refleja en su música, danza, gastronomía y tradiciones.</p>
+
+      <h3>🎶 Música</h3>
+      <p>Brasil es la cuna de ritmos mundialmente conocidos como la <strong>samba</strong>, la <strong>bossa nova</strong> y el <strong>forró</strong>.</p>
+
+      <h3>💃 Danza</h3>
+      <p>La danza es parte esencial de la identidad cultural, desde el samba en Río de Janeiro hasta la capoeira.</p>
+
+      <h3>🍴 Gastronomía</h3>
+      <ul>
+        <li>Feijoada.</li>
+        <li>Acarajé.</li>
+        <li>Moqueca.</li>
+        <li>Churrasco.</li>
+      </ul>
+
+      <h3>🎨 Arte y Tradición</h3>
+      <p>El arte brasileño combina expresiones modernas con tradiciones populares.</p>
+
+      <h3>🙏 Religión y Creencias</h3>
+      <p>Brasil es mayoritariamente católico, pero también se practican religiones afrobrasileñas como el <strong>Candomblé</strong> y la <strong>Umbanda</strong>.</p>
+    </section>
+
+    <!-- Seccion Guía de viaje -->
+    <section id="guia">
+      <h2>✈️ Guía de viaje</h2>
+      <p>Consejos prácticos para viajar a Brasil: transporte, alojamiento, seguridad y recomendaciones turísticas.</p>
+      <ul>
+        <li>Mejor época para viajar: diciembre a marzo (verano).</li>
+        <li>Transporte: vuelos internos, autobuses y metro en grandes ciudades.</li>
+        <li>Seguridad: precaución en áreas turísticas y uso de transporte oficial.</li>
+        <li>Recomendaciones: visitar Río de Janeiro, Salvador, Amazonas y Cataratas del Iguazú.</li>
+      </ul>
+    </section>
+
+    <!-- Seccion Galeria -->
+    <section id="galeria">
+      <h2>📸 Galería de Celebraciones</h2>
+      <p>Explora visualmente la magia y el color de nuestras festividades.</p>
+
+      <div class="galeria-grid">
+        <div class="galeria-item">
+          <span>🎭</span>
+          <p>Carnaval en Río</p>
+        </div>
+        <div class="galeria-item">
+          <span>🐂</span>
+          <p>Boi de Parintins</p>
+        </div>
+        <div class="galeria-item">
+          <span>🌽</span>
+          <p>Festas Juninas</p>
+        </div>
+        <div class="galeria-item">
+          <span>🕯️</span>
+          <p>Círio de Nazaré</p>
+        </div>
+        <div class="galeria-item">
+          <span>🎆</span>
+          <p>Año Nuevo</p>
+        </div>
+        <div class="galeria-item">
+          <span>🏖️</span>
+          <p>Playas de Brasil</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Festividades de Brasil | Diseñado por Jhon Cano</p>
+  </footer>
+
+  <!-- Script principal de interactividad -->
+  <script src="js/interactivity.js"></script>
+
+</body>
+</html>
